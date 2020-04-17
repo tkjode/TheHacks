@@ -1,0 +1,176 @@
+version: '3'
+services:
+
+  # IRC Services Mesh
+  ##################################################
+  # Bender -> IRC Bot allowing push notifications into channels. (irccat)
+  bender:
+    container_name: bender
+    image: irccloud/irccat
+    volumes:
+      - /home/xbmc/docker-conf-volumes/bender/irccat.yaml:/etc/irccat.yaml
+    ports:
+      - 12345:12345
+      - 8045:8045
+    restart: unless-stopped
+
+  # Anope -> NickServ and ChanServ cruicial IRC services.
+  # Config hack required - change character set map to rfc1459 in services.conf in the anopeconf volume
+  anope:
+    container_name: anope
+    image: anope/anope
+    environment:
+      - ANOPE_SERVICES_NAME=uplink.localhost.localdomain
+      - ANOPE_UPLINK_IP=192.168.0.5
+      - ANOPE_UPLINK_PASSWORD=XXXXXXXXXX
+    volumes:
+      - anopeconf:/anope/conf
+      - anopedata:/data
+    restart: unless-stopped
+
+  # IRCd -> The actual IRC Server.
+  # TLS is auto-configured.  Must connect by TLS to attain OPER/NetAdmin privileges.
+  # tcp/7000 is used for service connections (anope) and is limited to Container-Net access.
+  ircd:
+    container_name: ircd
+    image: inspircd/inspircd-docker
+    environment:
+      - INSP_ADMIN_NAME=Jody Reid
+      - INSP_ADMIN_EMAIL=tkjode@gmail.com
+      - INSP_ADMIN_NICK=tkjode
+      - INSP_NET_NAME=flexo
+      - INSP_SERVER_NAME=flexo.localhost.localdomain
+      - INSP_NET_SUFFIX=.localhost.localdomain
+      - INSP_OPER_NAME=opsuchan
+      - INSP_OPER_SSL_ONLY=yes
+      - INSP_OPER_HAS=hmac-sha256
+      - INSP_OPER_PASSWORD_HASH= # use mkpasswd in IRC to generate 
+      - INSP_TLS_CN=flexo.localhost.localdomain
+      - INSP_TLS_MAIL=tkjode@gmail.com
+      - INSP_TLS_UNIT=PhalNet IRC Administrators
+      - INSP_TLS_ORG=PhalNet Inc.
+      - INSP_TLS_LOC=Toronto
+      - INSP_TLS_STATE=Ontario
+      - INSP_TLS_COUNTRY=CA
+      - INSP_TLS_DURATION=3654
+      - INSP_SERVICES_NAME=uplink.localhost.localdomain
+      - INSP_SERVICES_PASSWORD=XXXXXXXXXX
+    ports:
+      - 6667:6667
+      - 6697:6697
+      - 7000:7000
+    restart: unless-stopped
+
+  # Media/NZB Mesh
+  ############################################
+  # Radarr - Locates movies on NZB Indexers
+  # Interfaces with Sabnzbd to download.
+  radarr:
+    container_name: radarr
+    image: linuxserver/radarr:amd64-latest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Toronto
+    volumes:
+      - /home/xbmc/docker-conf-volumes/radarr:/config
+      - /mnt/STOR-EL/Movies:/movies
+      - /mnt/STOR-EL/Automation/radarr:/downloads
+      - /home/xbmc/Scripts:/notificationScripts
+    ports:
+      - 7878:7878
+    restart: unless-stopped
+
+  # Sonarr - Locates TV Shows on NZB Indexers
+  # Interfaces with Sabnzbd to download.
+  sonarr:
+    image: linuxserver/sonarr
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Toronto
+    volumes:
+      - /home/xbmc/docker-conf-volumes/sonarr:/config
+      - /mnt/STOR-EL/TV Shows:/tv
+      - /mnt/STOR-EL/Automation/sonarr:/downloads
+      - /home/xbmc/Scripts:/notificationScripts
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+
+  # Monitoring Mesh
+  #########################################
+  # apcupsd_exporter -> Polls UPS via USB connection and exposes Prometheus Metrics 
+  apcupsd_exporter:
+    container_name: apcupsd_exporter
+    image: frostman/apcupsd-exporter
+    ports:
+      - "9162:9162"
+    network_mode: "host"
+    restart: unless-stopped
+
+  # Grafana -> Provides graphing UI
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:6.5.2
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    volumes:
+      - "grafana-storage:/var/lib/grafana"
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=ZZZZZZZZZZ
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+
+
+  # Sabnzbd_exporter -> Provides NNTP Downloader data in Prometheus Metrics Format
+  sabnzbd_exporter:
+    container_name: sab_exporter
+    image: msroest/sabnzbd_exporter
+    ports:
+      - "9387:9387"
+    restart: unless-stopped
+    environment:
+      - SABNZBD_APIKEY= # Get API Key from SABNZBd when installed.
+      - SABNZBD_BASEURL=http://192.168.0.5:5000
+  
+  # Node Exporter -> Provides Linux system stats in Prometheus metrics format
+  node_exporter:
+    container_name: node_exporter
+    image: prom/node-exporter
+    ports:
+      - "9100:9100"
+    restart: unless-stopped
+    network_mode: "host"
+    pid: "host"
+
+  # Prometheus - Provides polling and TSDB storage for metrics data
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
+    command:
+      - "--storage.tsdb.retention=365d"
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+    volumes:
+      - "/root/dockerRun/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+
+  # Home Project/Task Management Block
+
+  # Kanboard - provides a kanban board for tracking to-dos
+  kanboard:
+    container_name: kanboard
+    image: kanboard/kanboard:v1.2.13
+    ports:
+      - "3080:80"
+    restart: unless-stopped
+
+volumes:
+  grafana-storage:
+  anopeconf:
+  anopedata:

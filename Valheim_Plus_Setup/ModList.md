@@ -14,6 +14,7 @@
 
 * [Valheim Plus](https://www.nexusmods.com/valheim/mods/4)
 * [Basement](https://www.nexusmods.com/valheim/mods/1118)
+* [ValheimLib](https://www.nexusmods.com/valheim/mods/504)
 * [Epic Loot](https://www.nexusmods.com/valheim/mods/387)
 * [Extended Item Data Framework](https://www.nexusmods.com/valheim/mods/387)
 * [Heightmap Unlimited](https://www.nexusmods.com/valheim/mods/359)
@@ -40,6 +41,7 @@
 ./UseEquipmentInWater.zip-121-0-2-2-1615747917
 ./UsefulTrophies-123-1-1-0-1614673746
 ./Valheim Legends-796-0-3-1-1619332145
+./ValheimLib-504-0-0-15-1616718013
 ```
 
 ### Notes

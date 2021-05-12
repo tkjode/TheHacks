@@ -8,23 +8,24 @@
 * Vortex /w Valheim Extension
   * [Vortex Extension - Valheim Support](https://www.nexusmods.com/site/mods/210)
 
-### Current Mod List (as of May 1^st^, 2021)
+### Current Mod List (as of May 11^th^, 2021)
 
 > Source: NexusMod
 
 * [Valheim Plus](https://www.nexusmods.com/valheim/mods/4)
-* [Basement](https://www.nexusmods.com/valheim/mods/1118)
-* [ValheimLib](https://www.nexusmods.com/valheim/mods/504)
+* ~~[Basement](https://www.nexusmods.com/valheim/mods/1118)~~  Useless.
+* ~~[ValheimLib](https://www.nexusmods.com/valheim/mods/504)~~  Not actually required, removing next update.
 * [Epic Loot](https://www.nexusmods.com/valheim/mods/387)
 * [Extended Item Data Framework](https://www.nexusmods.com/valheim/mods/387)
-* [Heightmap Unlimited](https://www.nexusmods.com/valheim/mods/359)
+* [Heightmap Unlimited 1.1.1](https://www.nexusmods.com/valheim/mods/359)
 * [ModConfigEnforcer](https://www.nexusmods.com/valheim/mods/460)
 * [SeedTotem](https://www.nexusmods.com/valheim/mods/876)
 * [UseEquipmentInWater](https://www.nexusmods.com/valheim/mods/121)
 * [UsefulTrophies](https://www.nexusmods.com/valheim/mods/123)
 * [Valheim Legends](https://www.nexusmods.com/valheim/mods/796)
+* [Fisticuffs](https://www.nexusmods.com/valheim/mods/1080)
 
-### Version Data (as of May 1^st^, 2021)
+### Version Data (as of May 11^th^, 2021)
 
 > Folder Dump of __${VortextInstallPath}/valheim__
 > As mods are mostly client-side execution, there should be minimal compatibility issues not being exactly on the same version.
@@ -32,15 +33,16 @@
 
 ```text
 ./0.9.7 ValheimPlus Vortex-4-0-9-7-1617642630
-./Basement1.0.0-1118-1-0-0-1619550287
-./Epic Loot-387-0-7-7-1619555580
+./Epic Loot-387-0-7-9-1620661507
 ./Extended Item Data Framework-281-1-0-0-1614896504
+./FistiCuffs-1080-V1-1-5-1620440141
 ./Heightmap Unlimited 1.1.1-359-1-1-1-1618866977
+./Jotunn-1138-2-0-8-1620761826
 ./ModConfigEnforcer_v2.0.2-460-2-0-2-1619315845
-./SeedTotem-876-1-0-13-1619271322
+./SeedTotem-876-1-1-1-1620245922
 ./UseEquipmentInWater.zip-121-0-2-2-1615747917
 ./UsefulTrophies-123-1-1-0-1614673746
-./Valheim Legends-796-0-3-1-1619332145
+./Valheim Legends-796-0-3-4-1620536377
 ./ValheimLib-504-0-0-15-1616718013
 ```
 

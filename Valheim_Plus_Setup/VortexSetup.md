@@ -6,9 +6,9 @@
 
 - Valheim (Steam)
 - NexusMods account
-  - https://www.nexusmods.com/
+  - [https://www.nexusmods.com/]
 - Vortex Mod Manager from NexusMods
-  - https://www.nexusmods.com/site/mods/1?tab=files&file_id=1016
+  - [https://www.nexusmods.com/site/mods/1?tab=files&file_id=1016]
 
 ### Steps
 
@@ -58,11 +58,11 @@ Binding Vortex as a handler for NexusMods is strongly recommended.
 
 ### Ready to Play
 
-* Press the `(>)` icon in the Valheim picture in the upper right to launch the game.
+- Press the `(>)` icon in the Valheim picture in the upper right to launch the game.
 
 If the mods were successfully loaded, `BepInEx 5.x.x.x. - Valheim` console window should appear along with the game, and you should see log messages like this showing all of the mods injecting & loading.
 
-```
+```text
 [Message:   BepInEx] Chainloader ready
 [Message:   BepInEx] Chainloader started
 [Info   :   BepInEx] 16 plugins to load

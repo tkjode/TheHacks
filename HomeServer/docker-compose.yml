@@ -1,77 +1,113 @@
 version: '3'
 services:
+  # Games -----------------------------
+#  valheim:
+#    container_name: valheim
+#    image: lloesche/valheim-server
+#    volumes:
+#      - "/mnt/STOR-EL/flexo/valheim/:/config"
+#    environment:
+#      SERVER_NAME: BGIS BattleBjorn
+#      WORLD_NAME: Battleplains
+#      SERVER_PASS: ${VALHEIM_SERVER_PASS}
+#    ports:
+#      - 2456-2458:2456-2458/udp
+#    restart: unless-stopped
 
-  # IRC Services Mesh
-  ##################################################
-  # Bender -> IRC Bot allowing push notifications into channels. (irccat)
-  bender:
-    container_name: bender
-    image: irccloud/irccat
+  valheim_tng:
+    container_name: valheim-plus
+    image: lloesche/valheim-server
     volumes:
-      - /home/xbmc/docker-conf-volumes/bender/irccat.yaml:/etc/irccat.yaml
+      - "/mnt/STOR-EL/flexo/valheim-plus/:/config"
+    environment:
+      SERVER_NAME: BGIS Legends
+      WORLD_NAME: Ragnarok
+      SERVER_PASS: ${VALHEIM_SERVER_PASS}
+      BEPINEX: "true"
+      BACKUPS_IF_IDLE: "false"
     ports:
-      - 12345:12345
-      - 8045:8045
+      - 2456-2458:2456-2458/udp
     restart: unless-stopped
 
-  # Anope -> NickServ and ChanServ cruicial IRC services.
-  # Config hack required - change character set map to rfc1459 in services.conf in the anopeconf volume
-  anope:
-    container_name: anope
-    image: anope/anope
-    environment:
-      - ANOPE_SERVICES_NAME=uplink.localhost.localdomain
-      - ANOPE_UPLINK_IP=192.168.0.5
-      - ANOPE_UPLINK_PASSWORD=XXXXXXXXXX
+
+  # ElasticSearch and Kibana Services -------------
+  esnode:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2-amd64
     volumes:
-      - anopeconf:/anope/conf
-      - anopedata:/data
-    restart: unless-stopped
-
-  # IRCd -> The actual IRC Server.
-  # TLS is auto-configured.  Must connect by TLS to attain OPER/NetAdmin privileges.
-  # tcp/7000 is used for service connections (anope) and is limited to Container-Net access.
-  ircd:
-    container_name: ircd
-    image: inspircd/inspircd-docker
+      - "/mnt/STOR-EL/flexo/elasticsearch:/usr/share/elasticsearch/data"
     environment:
-      - INSP_ADMIN_NAME=Jody Reid
-      - INSP_ADMIN_EMAIL=tkjode@gmail.com
-      - INSP_ADMIN_NICK=tkjode
-      - INSP_NET_NAME=flexo
-      - INSP_SERVER_NAME=flexo.localhost.localdomain
-      - INSP_NET_SUFFIX=.localhost.localdomain
-      - INSP_OPER_NAME=opsuchan
-      - INSP_OPER_SSL_ONLY=yes
-      - INSP_OPER_HAS=hmac-sha256
-      - INSP_OPER_PASSWORD_HASH= # use mkpasswd in IRC to generate 
-      - INSP_TLS_CN=flexo.localhost.localdomain
-      - INSP_TLS_MAIL=tkjode@gmail.com
-      - INSP_TLS_UNIT=PhalNet IRC Administrators
-      - INSP_TLS_ORG=PhalNet Inc.
-      - INSP_TLS_LOC=Toronto
-      - INSP_TLS_STATE=Ontario
-      - INSP_TLS_COUNTRY=CA
-      - INSP_TLS_DURATION=3654
-      - INSP_SERVICES_NAME=uplink.localhost.localdomain
-      - INSP_SERVICES_PASSWORD=XXXXXXXXXX
+      - "discovery.type=single-node"
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
     ports:
-      - 6667:6667
-      - 6697:6697
-      - 7000:7000
+      - 9200:9200
     restart: unless-stopped
 
-  # Media/NZB Mesh
-  ############################################
-  # Radarr - Locates movies on NZB Indexers
-  # Interfaces with Sabnzbd to download.
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:7.10.2
+    depends_on:
+      - "esnode"
+    environment:
+      SERVER_NAME: kibana
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+      LOGGING_JSON: "true"
+      LOGGING_QUIET: "true"
+      SERVER_HOST: kibana
+    ports:
+      - 5601:5601
+    extra_hosts:
+      - "flexo:10.0.0.5"
+    restart: unless-stopped
+    
+
+  # Docker Management Services ---------------
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower:latest
+    environment:
+      WATCHTOWER_SCHEDULE: 0 0 5 * * 1-5
+      TZ: America/Toronto
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+ 
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce
+    ports: 
+      - "9000:9000"
+      - "8000:8000"
+    volumes:
+      - portainerData:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+   
+
+  # Home Media Services  ------------------
+
+  sabnzbd:
+    container_name: sabnzbd
+    image: linuxserver/sabnzbd:latest
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: America/Toronto
+    volumes:
+      - /home/xbmc/docker-conf-volumes/sabnzbd:/config
+      - /mnt/STOR-EL/Automation:/downloads
+    ports:
+      - 5000:8080
+    restart: unless-stopped
+
   radarr:
     container_name: radarr
     image: linuxserver/radarr:amd64-latest
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Toronto
+      PUID: 1000
+      PGID: 1000
+      TZ: America/Toronto
     volumes:
       - /home/xbmc/docker-conf-volumes/radarr:/config
       - /mnt/STOR-EL/Movies:/movies
@@ -81,15 +117,13 @@ services:
       - 7878:7878
     restart: unless-stopped
 
-  # Sonarr - Locates TV Shows on NZB Indexers
-  # Interfaces with Sabnzbd to download.
   sonarr:
     image: linuxserver/sonarr
     container_name: sonarr
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Toronto
+      PUID: 1000
+      PGID: 1000
+      TZ: America/Toronto
     volumes:
       - /home/xbmc/docker-conf-volumes/sonarr:/config
       - /mnt/STOR-EL/TV Shows:/tv
@@ -99,9 +133,17 @@ services:
       - 8989:8989
     restart: unless-stopped
 
-  # Monitoring Mesh
-  #########################################
-  # apcupsd_exporter -> Polls UPS via USB connection and exposes Prometheus Metrics 
+
+  # Monitoring --------------------------
+
+  blackbox_exporter:
+    container_name: blackbox_exporter
+    image: prom/blackbox-exporter:master
+    ports: 
+      - "9115:9115"
+    network_mode: "host"
+    restart: unless-stopped
+
   apcupsd_exporter:
     container_name: apcupsd_exporter
     image: frostman/apcupsd-exporter
@@ -110,34 +152,20 @@ services:
     network_mode: "host"
     restart: unless-stopped
 
-  # Grafana -> Provides graphing UI
   grafana:
     container_name: grafana
-    image: grafana/grafana:6.5.2
+    image: grafana/grafana:latest
     ports:
       - "3000:3000"
     restart: unless-stopped
     volumes:
       - "grafana-storage:/var/lib/grafana"
     environment:
-      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=ZZZZZZZZZZ
-      - GF_AUTH_ANONYMOUS_ENABLED=true
+      GF_INSTALL_PLUGINS: grafana-clock-panel,grafana-piechart-panel,jdbranham-diagram-panel
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASS}
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
 
-
-  # Sabnzbd_exporter -> Provides NNTP Downloader data in Prometheus Metrics Format
-  sabnzbd_exporter:
-    container_name: sab_exporter
-    image: msroest/sabnzbd_exporter
-    ports:
-      - "9387:9387"
-    restart: unless-stopped
-    environment:
-      - SABNZBD_APIKEY= # Get API Key from SABNZBd when installed.
-      - SABNZBD_BASEURL=http://192.168.0.5:5000
-  
-  # Node Exporter -> Provides Linux system stats in Prometheus metrics format
   node_exporter:
     container_name: node_exporter
     image: prom/node-exporter
@@ -146,8 +174,9 @@ services:
     restart: unless-stopped
     network_mode: "host"
     pid: "host"
+    volumes:
+      - /mnt/STOR-EL/:/STOR-EL
 
-  # Prometheus - Provides polling and TSDB storage for metrics data
   prometheus:
     container_name: prometheus
     image: prom/prometheus:latest
@@ -160,17 +189,73 @@ services:
     volumes:
       - "/root/dockerRun/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
 
-  # Home Project/Task Management Block
+  sabnzbd_exporter:
+    container_name: sab_exporter
+    image: msroest/sabnzbd_exporter
+    ports:
+      - "9387:9387"
+    restart: unless-stopped
+    environment:
+      SABNZBD_APIKEY: ${SABNZBD_API_KEY}
+      SABNZBD_BASEURL: http://10.0.0.5:5000
 
-  # Kanboard - provides a kanban board for tracking to-dos
+
+  # Home Productivity Services -----------------
+
   kanboard:
     container_name: kanboard
-    image: kanboard/kanboard:v1.2.13
+    image: kanboard/kanboard:latest
     ports:
       - "3080:80"
     restart: unless-stopped
 
+  teedy:
+    container_name: teedy
+    image: jdreinhardt/teedy:latest
+    ports:
+      - "10080:8080"
+    restart: unless-stopped
+    volumes:
+      - "/mnt/STOR-EL/flexo/teedy:/data"
+
+  taskd:
+    container_name: taskd
+    hostname: flexo
+    image: andir/docker-taskd
+    restart: unless-stopped
+    ports:
+      - "53589:53589"
+    volumes:
+      - "taskdpersist:/var/taskd"
+      - "/mnt/STOR-EL/flexo/taskd/clients:/clients"
+      - "/mnt/STOR-EL/flexo/taskd/ssl_config.vars:/var/taskd/pki/vars"
+    environment:
+      CLIENT_CERT_PATH: /clients
+
+  taskweb:
+    container_name: taskweb
+    image: jeckel/taskwarrior-web
+    restart: unless-stopped
+    extra_hosts:
+      - "flexo:10.0.0.5"
+    ports:
+      - "5678:5678"
+    environment:
+      TASKD_SERVER: flexo:53589
+      TASKD_CREDENTIALS: PhalNet/tkjode/302bea50-fea6-4e4a-ae86-fbd1bbe6e4c0
+      CLIENT_CERT_PATH: /clients
+    volumes:
+      - "/mnt/STOR-EL/flexo/taskd/clients/tkjode.cert.pem:/clients/client.cert.pem"
+      - "/mnt/STOR-EL/flexo/taskd/clients/tkjode.key.pem:/clients/client.key.pem"
+      - "/mnt/STOR-EL/flexo/taskd/clients/ca.cert.pem:/clients/ca.cert.pem"
+
 volumes:
   grafana-storage:
-  anopeconf:
-  anopedata:
+  taskdpersist:
+  portainerData:
+  esdata:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /mnt/STOR-EL/flexo/elasticsearch

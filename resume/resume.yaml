@@ -90,7 +90,156 @@ work:
     endDate: 2019-07
     summary: "Modernize legacy monitoring platform and build self-service observability services in next-generation hosting platforms."
     highlights:
-      - ""
+      - "Refactored multiple Nagios XI instances into a unified monitoring platform spanning multiple data centers."
+      - "Integrated monitoring products alerting through VictorOps and managed on-call rotations."
+      - "Standardized Splunk forwarder agent configurations on all data center with greater log collection coverage using Puppet."
+      - "Standardized NewRelic APM agent installations on all Java Web Services platforms and PHP application servers."
+      - "Deployed and maintained Kubernetes observability stack using Prometheus, Grafana, InfluxDB and AlertManager stack."
+      - "Deployed and maintained Kubernetes logging and tracing stack using ElasticSearch, Kibana, FluentD and Jaeger"
+      - "Managed CloudWatch Logs retention to S3 and Splunk Cloud feed volumes."
+      - "Created self-service patterns for developers and Devops engineers to submit custom dashboards and alerting rules for their projects with automatic deployment on pipeline success."
+      - "Developed Docker images for GitLab Runner pipeline stages containing Ansible playbooks for deploying to various Kubernetes clusters."
+      - "Managed Observability resources (S3, EC2, Lambda and Kinesis) on multiple AWS sub-accounts with Hashicorp Terraform."
+      - "Managed on-premises monitoring assets entirely as Infrastructure-as-Code with Vagrant, Puppet and Ansible."
+  - name: "Cognizant"
+    url: https://www.cognizant.com/canada
+    description: "Information Technology Consulting"
+    position: "Senior Technical Analyst, Service Delivery Manager"
+    location: "Toronto, ON"
+    startDate: 2019-06
+    summary: "Manage hosted environments delivery, ensure server security compliance and provide consultative services for major initiatives."
+    highlights:
+      - "Provide leadership and guidance to on-site and offshore team members assigned to various roles and contracts in clients' business units."
+      - "Work with development teams to coordinate and provision resources or efforts required from various internal service departments."
+      - "Develop and maintain checklists for asset provisioning and liaise with service owners to add efficiency and value-additional effort to new builds to meet their requirements."
+      - "Develop new processes and procedures as additional duties and contracts are onboarded."
+      - "Assist development teams with investigations when hosting environment issues are suspected."
+      - "Manage, estimate and prioritize backlog of requests, assign issues based on team skill set and availability."
+      - "Produce weekly activity reports and monthly governance updates to client leadership team."
+      - "Seek opportunities for new business within client environment and propose relevant staffing and services from Cognizant."
+
+education:
+  - area: "Computer Programming & Analysis"
+    institution: "Seneca College of Applied Arts & Technology"
+    url: https://www.senecacollege.ca/programs/fulltime/CPA.html
+    studyType: "3 Year Diploma"
+    startDate: "1999"
+    endDate: "2001"
+  - area: "Fundamentals of Project Planning and Management"
+    institution: "University of Virginia, Darden School of Business"
+    url: https://www.coursera.org/learn/uva-darden-project-management
+    studyType: "Online Course"
+    startDate: "2020"
+  - area: "Kafka Monitoring & Operations"
+    institution: Udemy
+    url: https://www.udemy.com/course/kafka-monitoring-and-operations/
+    studyType: "Online Course"
+    startDate: "2019"
+  - area: "Building Leadership Essentials"
+    institution: The Niagara Institute
+    startDate: "2010"
+    studyType: "Seminar"  
+
+certificates:
+  - name: "Groundwork Level 1 Administrator"
+    date: 2008-09-01
+    issuer: "Groundwork Open Source"
+  - name: "Groundwork Level 2 Engineer"
+    date: 2008-09-01
+    issuer: "Groundwork Open Source"
+  - name: "Building Leadership Essentials"
+    issuer: "The Niagara Institute"
+    date: 2010-08-15
+  - name: "Certified Scrum Master (Inactive)"
+    issuer: "Agile Institute, Berteig Consulting"
+    url: https://www.scrumalliance.org/community/profile/jreid18
+    date: 2015-04-01
+
+awards:
+  - awarder: "Symcor Inc."
+    title: "Outstanding Leadership Award"
+    summary: "Awarded for contributions to steering committee and program for achieving PCI-DSS compliance."
+  - awarder: "Tanzania National Parks"
+    title: "Mt. Kilimanjaro - Tanzania"
+    date: 2019-06-25
+    summary: "Certificate of completion for reaching Gilman's Point (5685m)"
+  
+skills:
+  - name: "IT Service Delivery"
+    level: "Intermediate"
+    keywords:
+      - "ITILv3"
+      - "ServiceNow"
+      - "JIRA"
+      - "Confluence"
+      - "Peoplesoft"
+      - "Resource Management"
+      - "Project Accounting"
+  - name: "Operating Systems"
+    level: "Master"
+    keywords:
+      - "RedHat Enterprise Linux"
+      - "CentOS"
+      - "Debian"
+      - "Ubuntu"
+      - "Windows Server 2008"
+      - "Windows Server 2012"
+      - "Windows Server 2016"
+  - name: "DevOps"
+    level: "Intermediate"
+    keywords:
+      - "Kubernetes"
+      - "Docker"
+      - "docker-compose"
+      - "YAML"
+      - "JSON"
+      - "CloudFormation"
+      - "Terraform"
+      - "Vagrant"
+      - "Ansible"
+      - "Puppet"
+      - "GitLab CI/CD"
+      - "GitHub Actions"
+  - name: "Cloud Services"
+    level: "Intermediate"
+    keywords:
+      - "AWS"
+      - "EC2"
+      - "EKS"
+      - "CloudWatch"
+      - "Lambda"
+      - "Kinesis"
+      - "SNS"
+      - "VPC"
+      - "S3"
+  - name: "Observability"
+    level: "Master"
+    keywords:
+      - "Nagios"
+      - "Zabbix"
+      - "Splunk"
+      - "Prometheus"
+      - "AlertManager"
+      - "Grafana"
+      - "InfluxDB"
+      - "LogStash"
+      - "FluentD"
+      - "VictorOps"
+      - "ElasticSearch"
+      - "Kibana"
+      - "Jaeger"
+  - name: "Scripting"
+    level: "Intermediate"  
+    keywords:
+      - "Python"
+      - "Bash"
+      - "Javascript"
+      - "NodeJS"
+  
+
+    
+
+      
       
 
 

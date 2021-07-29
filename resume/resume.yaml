@@ -1,4 +1,6 @@
 $schema: "https://json.schemastore.org/resume.json"
+meta:
+  theme: eloquent
 basics:
   name: Jody Reid
   label: IT Service Delivery Lead
@@ -17,70 +19,23 @@ basics:
     - network: LinkedIn
       url: https://www.linkedin.com/in/jody-reid-7290739/
 work:
-  - name: "RBC Capital Markets"
-    url: https://www.rbccm.com/
-    position: "Network Analyst"
+  - name: "Cognizant"
+    url: https://www.cognizant.com/canada
+    description: "Information Technology Consulting"
+    position: "Senior Technical Analyst, Service Delivery Manager"
     location: "Toronto, ON"
-    startDate: 2001-12
-    endDate: 2004-06
-    summary: Level 2 Network Support.  Switch and router configuration management across multiple sites.  Manage network availability monitoring across global data network.
+    startDate: 2019-06
+    summary: "Manage hosted environments delivery, ensure server security compliance and provide consultative services for major initiatives."
     highlights:
-      - "Migrated availability monitoring from HP OpenView to Aprisma (CA) Spectrum platform."
-      - "Supported market trading data and VOIP/Turret networks."
-      - "Developed repeat supression system for syslog-based alerts."
-      - "Implemented emergency notifications with PageNet for on-call rotation."
-      - "Supported and maintained Polycom video conferencing solution and VOIP desk phone networks."
-  - name: "TVOntario"
-    url: https://www.tvo.org/
-    description: "Ontario Educational Communication Authority (OECA)"
-    position: "Implementation Specialist (Contract)"
-    loation: "Toronto, ON"
-    startDate: 2004-07
-    endDate: 2006-06
-    summary: "Implementation of updated core network services, desktop imaging, systems monitoring and site-wide secure wireless service."
-    highlights:
-      - "Standardized Source Code Management on Subversion and defined simple pipelines to build deployable packages from specific commits and tags."
-      - "Configured backhaul netowork for site-wide Cisco Wifi with 802.1x security for employees and guest networks."
-      - "Nagios implementation covering data center environment, server, network and end-user application monitoring and alerting."
-      - "Video Streaming Server implementation with Flash Communication Server."
-      - "Image setup and rollout of Mac OS X 10.4 on end-user devices."
-      - "Retire end-of-life OS X Servers and replace with Linux servers."
-  - name: "Symcor Inc."
-    url: https://www.symcor.ca/
-    description: "Business Process Outsourcing"
-    position: "Technical Team Lead (2006-2012), Senior Manager (2012-2014)"
-    location: "Mississauga, ON"
-    startDate: 2006-07
-    endDate: 2014-10
-    summary: "Build enterprise monitoring services, enhance capabilities with in-house developed customizations and ensure alerting coverage across all enterprise services."
-    highlights:
-      - "Replaced multiple monitoring tools with Groundwork Monitor Enterprise"
-      - "Built strong vendor relationship with Groundwork and contributed to their product development as their largest customer at the time."
-      - "Within first year of operation, SLA monitoring and alerting reduced penalties paid to customers by 80% vs. previous year."      
-      - "Hired 2 developers and 1 configuration manager to enhance capabilities with integrations with Service-Now, customized monitoring agents."
-      - "Ensured monitoring requirements gathering as a mandatory process for all projects to be completed prior to production launch."
-      - "Guide developers and project teams to ensure best practices and adequate coverage captured in monitoring requirements."
-      - "Expanded role to include management of Collaborative Applications Services including Sharepoint, Lotus Notes mail, and ServiceNow."
-      - "Contributed to PCI Compliance program steering committee and recognized with Outstanding Leadership Award."
-      - "Engaged partners in IT Finance to define short and long-term plans, project allocations, identify savings opportunities, implement efficiencies and reduce redundancies between teams."
-      - "Maintained exceptional Employee Retention, Engagement and Motivation scores in annual employee opinion survey."
-  - name: "BGIS - Brookfield Global Integrated Solutions"
-    url: https://www.bgis.com/ca/
-    description: "Facility Management - Critical Environments"
-    position: "Systems Analyst (2015-2015), Technical Operations Manager (2015-2017)"
-    location: "Markham, ON"
-    startDate: 2015-03
-    endDate: 2017-03
-    summary: "Deliver systems and applications monitoring, lead Level 1 and Level 2 End User Support and Desktop Engineering groups."
-    highlights:
-      - "Implement monitoring and alerting solution with Nagios, Zabbix and VictorOps to cover server and network availability monitoring."
-      - "Designed and implemented Network Operations Center wall boards for IT Operations and Support teams."
-      - "Managed on-call rotations, ChatOps integrations with VictorOps."
-      - "Executed transformation of helpdesk into a trained service desk capable of 50% first call resolution."
-      - "Replaced Service Desk hunt-group phone setup and basic ticket tracking system with a vendor-managed call-queuing system integrated with LanDesk Service Management."
-      - "Engaged end-user hardware suppliers to integrate with Desktop Engineering and reduce turnaround time on device deliveries by offloading imaging/setup to vendor."
-      - "Prepared newly acquired work sites across Canada with phones, PCs and peripherals prior to go-live."
-      - "Implemented Change Management procedures for all IT Operations and application releases to provide business communication of impactful activities."
+      - "Provide leadership and guidance to on-site and offshore team members assigned to various roles and contracts in clients' business units."
+      - "Work with development teams to coordinate and provision resources or efforts required from various internal service departments."
+      - "Develop and maintain checklists for asset provisioning and liaise with service owners to add efficiency and value-additional effort to new builds to meet their requirements."
+      - "Develop new processes and procedures as additional duties and contracts are onboarded."
+      - "Assist development teams with investigations when hosting environment issues are suspected."
+      - "Manage, estimate and prioritize backlog of requests, assign issues based on team skill set and availability."
+      - "Produce weekly activity reports and monthly governance updates to client leadership team."
+      - "Seek opportunities for new business within client environment and propose relevant staffing and services from Cognizant."
+
   - name: "Leonardo Worldwide Corporation"
     url: "https://www.leonardoworldwide.com/"
     description: "Hospitality and Travel Web Content Management"
@@ -101,22 +56,75 @@ work:
       - "Developed Docker images for GitLab Runner pipeline stages containing Ansible playbooks for deploying to various Kubernetes clusters."
       - "Managed Observability resources (S3, EC2, Lambda and Kinesis) on multiple AWS sub-accounts with Hashicorp Terraform."
       - "Managed on-premises monitoring assets entirely as Infrastructure-as-Code with Vagrant, Puppet and Ansible."
-  - name: "Cognizant"
-    url: https://www.cognizant.com/canada
-    description: "Information Technology Consulting"
-    position: "Senior Technical Analyst, Service Delivery Manager"
-    location: "Toronto, ON"
-    startDate: 2019-06
-    summary: "Manage hosted environments delivery, ensure server security compliance and provide consultative services for major initiatives."
+
+  - name: "BGIS - Brookfield Global Integrated Solutions"
+    url: https://www.bgis.com/ca/
+    description: "Facility Management - Critical Environments"
+    position: "Systems Analyst (2015-2015), Technical Operations Manager (2015-2017)"
+    location: "Markham, ON"
+    startDate: 2015-03
+    endDate: 2017-03
+    summary: "Deliver systems and applications monitoring, lead Level 1 and Level 2 End User Support and Desktop Engineering groups."
     highlights:
-      - "Provide leadership and guidance to on-site and offshore team members assigned to various roles and contracts in clients' business units."
-      - "Work with development teams to coordinate and provision resources or efforts required from various internal service departments."
-      - "Develop and maintain checklists for asset provisioning and liaise with service owners to add efficiency and value-additional effort to new builds to meet their requirements."
-      - "Develop new processes and procedures as additional duties and contracts are onboarded."
-      - "Assist development teams with investigations when hosting environment issues are suspected."
-      - "Manage, estimate and prioritize backlog of requests, assign issues based on team skill set and availability."
-      - "Produce weekly activity reports and monthly governance updates to client leadership team."
-      - "Seek opportunities for new business within client environment and propose relevant staffing and services from Cognizant."
+      - "Implement monitoring and alerting solution with Nagios, Zabbix and VictorOps to cover server and network availability monitoring."
+      - "Designed and implemented Network Operations Center wall boards for IT Operations and Support teams."
+      - "Managed on-call rotations, ChatOps integrations with VictorOps."
+      - "Executed transformation of helpdesk into a trained service desk capable of 50% first call resolution."
+      - "Replaced Service Desk hunt-group phone setup and basic ticket tracking system with a vendor-managed call-queuing system integrated with LanDesk Service Management."
+      - "Engaged end-user hardware suppliers to integrate with Desktop Engineering and reduce turnaround time on device deliveries by offloading imaging/setup to vendor."
+      - "Prepared newly acquired work sites across Canada with phones, PCs and peripherals prior to go-live."
+      - "Implemented Change Management procedures for all IT Operations and application releases to provide business communication of impactful activities."
+
+  - name: "Symcor Inc."
+    url: https://www.symcor.ca/
+    description: "Business Process Outsourcing"
+    position: "Technical Team Lead (2006-2012), Senior Manager (2012-2014)"
+    location: "Mississauga, ON"
+    startDate: 2006-07
+    endDate: 2014-10
+    summary: "Build enterprise monitoring services, enhance capabilities with in-house developed customizations and ensure alerting coverage across all enterprise services."
+    highlights:
+      - "Replaced multiple monitoring tools with Groundwork Monitor Enterprise"
+      - "Built strong vendor relationship with Groundwork and contributed to their product development as their largest customer at the time."
+      - "Within first year of operation, SLA monitoring and alerting reduced penalties paid to customers by 80% vs. previous year."      
+      - "Hired 2 developers and 1 configuration manager to enhance capabilities with integrations with Service-Now, customized monitoring agents."
+      - "Ensured monitoring requirements gathering as a mandatory process for all projects to be completed prior to production launch."
+      - "Guide developers and project teams to ensure best practices and adequate coverage captured in monitoring requirements."
+      - "Expanded role to include management of Collaborative Applications Services including Sharepoint, Lotus Notes mail, and ServiceNow."
+      - "Contributed to PCI Compliance program steering committee and recognized with Outstanding Leadership Award."
+      - "Engaged partners in IT Finance to define short and long-term plans, project allocations, identify savings opportunities, implement efficiencies and reduce redundancies between teams."
+      - "Maintained exceptional Employee Retention, Engagement and Motivation scores in annual employee opinion survey."
+
+  - name: "TVOntario"
+    url: https://www.tvo.org/
+    description: "Ontario Educational Communication Authority (OECA)"
+    position: "Implementation Specialist (Contract)"
+    loation: "Toronto, ON"
+    startDate: 2004-07
+    endDate: 2006-06
+    summary: "Implementation of updated core network services, desktop imaging, systems monitoring and site-wide secure wireless service."
+    highlights:
+      - "Standardized Source Code Management on Subversion and defined simple pipelines to build deployable packages from specific commits and tags."
+      - "Configured backhaul netowork for site-wide Cisco Wifi with 802.1x security for employees and guest networks."
+      - "Nagios implementation covering data center environment, server, network and end-user application monitoring and alerting."
+      - "Video Streaming Server implementation with Flash Communication Server."
+      - "Image setup and rollout of Mac OS X 10.4 on end-user devices."
+      - "Retire end-of-life OS X Servers and replace with Linux servers."
+
+  - name: "RBC Capital Markets"
+    url: https://www.rbccm.com/
+    position: "Network Analyst"
+    location: "Toronto, ON"
+    startDate: 2001-12
+    endDate: 2004-06
+    summary: Level 2 Network Support.  Switch and router configuration management across multiple sites.  Manage network availability monitoring across global data network.
+    highlights:
+      - "Migrated availability monitoring from HP OpenView to Aprisma (CA) Spectrum platform."
+      - "Supported market trading data and VOIP/Turret networks."
+      - "Developed repeat supression system for syslog-based alerts."
+      - "Implemented emergency notifications with PageNet for on-call rotation."
+      - "Supported and maintained Polycom video conferencing solution and VOIP desk phone networks."
+
 
 education:
   - area: "Computer Programming & Analysis"
@@ -235,16 +243,3 @@ skills:
       - "Bash"
       - "Javascript"
       - "NodeJS"
-  
-
-    
-
-      
-      
-
-
-
-    
-
-
-  

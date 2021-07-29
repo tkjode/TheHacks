@@ -1,6 +1,6 @@
 $schema: "https://json.schemastore.org/resume.json"
 meta:
-  theme: eloquent
+  theme: elegant
 basics:
   name: Jody Reid
   label: IT Service Delivery Lead
@@ -130,23 +130,26 @@ education:
   - area: "Computer Programming & Analysis"
     institution: "Seneca College of Applied Arts & Technology"
     url: https://www.senecacollege.ca/programs/fulltime/CPA.html
-    studyType: "3 Year Diploma"
-    startDate: "1999"
-    endDate: "2001"
+    studyType: "Diploma"
+    startDate: 1999-09
+    endDate: 2002-08
   - area: "Fundamentals of Project Planning and Management"
     institution: "University of Virginia, Darden School of Business"
     url: https://www.coursera.org/learn/uva-darden-project-management
     studyType: "Online Course"
-    startDate: "2020"
+    startDate: 2020-09
+    endDate: 2020-09
   - area: "Kafka Monitoring & Operations"
     institution: Udemy
     url: https://www.udemy.com/course/kafka-monitoring-and-operations/
     studyType: "Online Course"
-    startDate: "2019"
+    startDate: 2019-02
+    endDate: 2019-02
   - area: "Building Leadership Essentials"
     institution: The Niagara Institute
-    startDate: "2010"
-    studyType: "Seminar"  
+    startDate: 2010-10
+    endDate: 2010-10
+    studyType: "Seminar"
 
 certificates:
   - name: "Groundwork Level 1 Administrator"
@@ -173,6 +176,20 @@ awards:
     summary: "Certificate of completion for reaching Gilman's Point (5685m)"
   
 skills:
+  - name: "Management"
+    level: "Intermediate"
+    keywords:
+      - "Motivation"
+      - "Engagement"
+      - "Hiring"
+      - "Resource Allocation"
+      - "Conflict Resolution"
+      - "Succession Planning"
+      - "Retention"
+      - "Performance Improvement Planning"
+      - "Achievement Recognition"
+      - "Performance Review"
+      - "SMART Goals"
   - name: "IT Service Delivery"
     level: "Intermediate"
     keywords:

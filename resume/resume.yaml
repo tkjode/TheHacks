@@ -1,0 +1,262 @@
+$schema: "https://json.schemastore.org/resume.json"
+meta:
+  theme: elegant
+basics:
+  name: Jody Reid
+  label: IT Service Delivery Lead
+  image: https://media-exp1.licdn.com/dms/image/C4E03AQH4T7FEBMpZvw/profile-displayphoto-shrink_800_800/0/1571778758437?e=1632960000&v=beta&t=YBeiFe1uFseyKJhcFsSw1YJFtxbcinwG6ORAVpM9hAo
+  email: jody.reid@phalnet.com  
+  phone: (647)203-5633
+  url: https://www.phalnet.com
+  summary: Experienced technical leader with 20+ years experience building and improving IT services.  A natural motivator with exceptional staff retention rates and above average employee survey engagement scores.  Ready to take on challenging initiatives to build, transform and deliver high-impact services to organizations, users and customers.
+  location:
+    address: 23 Ypres Rd. 
+    postalCode: M6M 0B2 
+    city: York
+    countryCode: CA
+    region: Ontario
+  profiles:
+    - network: LinkedIn
+      url: https://www.linkedin.com/in/jody-reid-7290739/
+work:
+  - name: "Cognizant"
+    url: https://www.cognizant.com/canada
+    description: "Information Technology Consulting"
+    position: "Senior Technical Analyst, Service Delivery Manager"
+    location: "Toronto, ON"
+    startDate: 2019-06
+    summary: "Manage hosted environments delivery, ensure server security compliance and provide consultative services for major initiatives."
+    highlights:
+      - "Provide leadership and guidance to on-site and offshore team members assigned to various roles and contracts in clients' business units."
+      - "Work with development teams to coordinate and provision resources or efforts required from various internal service departments."
+      - "Develop and maintain checklists for asset provisioning and liaise with service owners to add efficiency and value-additional effort to new builds to meet their requirements."
+      - "Develop new processes and procedures as additional duties and contracts are onboarded."
+      - "Assist development teams with investigations when hosting environment issues are suspected."
+      - "Manage, estimate and prioritize backlog of requests, assign issues based on team skill set and availability."
+      - "Produce weekly activity reports and monthly governance updates to client leadership team."
+      - "Seek opportunities for new business within client environment and propose relevant staffing and services from Cognizant."
+
+  - name: "Leonardo Worldwide Corporation"
+    url: "https://www.leonardoworldwide.com/"
+    description: "Hospitality and Travel Web Content Management"
+    position: "Application Monitoring Specialist"
+    location: "Toronto, ON"
+    startDate: 2017-05
+    endDate: 2019-07
+    summary: "Modernize legacy monitoring platform and build self-service observability services in next-generation hosting platforms."
+    highlights:
+      - "Refactored multiple Nagios XI instances into a unified monitoring platform spanning multiple data centers."
+      - "Integrated monitoring products alerting through VictorOps and managed on-call rotations."
+      - "Standardized Splunk forwarder agent configurations on all data center with greater log collection coverage using Puppet."
+      - "Standardized NewRelic APM agent installations on all Java Web Services platforms and PHP application servers."
+      - "Deployed and maintained Kubernetes observability stack using Prometheus, Grafana, InfluxDB and AlertManager stack."
+      - "Deployed and maintained Kubernetes logging and tracing stack using ElasticSearch, Kibana, FluentD and Jaeger"
+      - "Managed CloudWatch Logs retention to S3 and Splunk Cloud feed volumes."
+      - "Created self-service patterns for developers and Devops engineers to submit custom dashboards and alerting rules for their projects with automatic deployment on pipeline success."
+      - "Developed Docker images for GitLab Runner pipeline stages containing Ansible playbooks for deploying to various Kubernetes clusters."
+      - "Managed Observability resources (S3, EC2, Lambda and Kinesis) on multiple AWS sub-accounts with Hashicorp Terraform."
+      - "Managed on-premises monitoring assets entirely as Infrastructure-as-Code with Vagrant, Puppet and Ansible."
+
+  - name: "BGIS - Brookfield Global Integrated Solutions"
+    url: https://www.bgis.com/ca/
+    description: "Facility Management - Critical Environments"
+    position: "Systems Analyst (2015-2015), Technical Operations Manager (2015-2017)"
+    location: "Markham, ON"
+    startDate: 2015-03
+    endDate: 2017-03
+    summary: "Deliver systems and applications monitoring, lead Level 1 and Level 2 End User Support and Desktop Engineering groups."
+    highlights:
+      - "Implement monitoring and alerting solution with Nagios, Zabbix and VictorOps to cover server and network availability monitoring."
+      - "Designed and implemented Network Operations Center wall boards for IT Operations and Support teams."
+      - "Managed on-call rotations, ChatOps integrations with VictorOps."
+      - "Executed transformation of helpdesk into a trained service desk capable of 50% first call resolution."
+      - "Replaced Service Desk hunt-group phone setup and basic ticket tracking system with a vendor-managed call-queuing system integrated with LanDesk Service Management."
+      - "Engaged end-user hardware suppliers to integrate with Desktop Engineering and reduce turnaround time on device deliveries by offloading imaging/setup to vendor."
+      - "Prepared newly acquired work sites across Canada with phones, PCs and peripherals prior to go-live."
+      - "Implemented Change Management procedures for all IT Operations and application releases to provide business communication of impactful activities."
+
+  - name: "Symcor Inc."
+    url: https://www.symcor.ca/
+    description: "Business Process Outsourcing"
+    position: "Technical Team Lead (2006-2012), Senior Manager (2012-2014)"
+    location: "Mississauga, ON"
+    startDate: 2006-07
+    endDate: 2014-10
+    summary: "Build enterprise monitoring services, enhance capabilities with in-house developed customizations and ensure alerting coverage across all enterprise services."
+    highlights:
+      - "Replaced multiple monitoring tools with Groundwork Monitor Enterprise"
+      - "Built strong vendor relationship with Groundwork and contributed to their product development as their largest customer at the time."
+      - "Within first year of operation, SLA monitoring and alerting reduced penalties paid to customers by 80% vs. previous year."      
+      - "Hired 2 developers and 1 configuration manager to enhance capabilities with integrations with Service-Now, customized monitoring agents."
+      - "Ensured monitoring requirements gathering as a mandatory process for all projects to be completed prior to production launch."
+      - "Guide developers and project teams to ensure best practices and adequate coverage captured in monitoring requirements."
+      - "Expanded role to include management of Collaborative Applications Services including Sharepoint, Lotus Notes mail, and ServiceNow."
+      - "Contributed to PCI Compliance program steering committee and recognized with Outstanding Leadership Award."
+      - "Engaged partners in IT Finance to define short and long-term plans, project allocations, identify savings opportunities, implement efficiencies and reduce redundancies between teams."
+      - "Maintained exceptional Employee Retention, Engagement and Motivation scores in annual employee opinion survey."
+
+  - name: "TVOntario"
+    url: https://www.tvo.org/
+    description: "Ontario Educational Communication Authority (OECA)"
+    position: "Implementation Specialist (Contract)"
+    loation: "Toronto, ON"
+    startDate: 2004-07
+    endDate: 2006-06
+    summary: "Implementation of updated core network services, desktop imaging, systems monitoring and site-wide secure wireless service."
+    highlights:
+      - "Standardized Source Code Management on Subversion and defined simple pipelines to build deployable packages from specific commits and tags."
+      - "Configured backhaul netowork for site-wide Cisco Wifi with 802.1x security for employees and guest networks."
+      - "Nagios implementation covering data center environment, server, network and end-user application monitoring and alerting."
+      - "Video Streaming Server implementation with Flash Communication Server."
+      - "Image setup and rollout of Mac OS X 10.4 on end-user devices."
+      - "Retire end-of-life OS X Servers and replace with Linux servers."
+
+  - name: "RBC Capital Markets"
+    url: https://www.rbccm.com/
+    position: "Network Analyst"
+    location: "Toronto, ON"
+    startDate: 2001-12
+    endDate: 2004-06
+    summary: Level 2 Network Support.  Switch and router configuration management across multiple sites.  Manage network availability monitoring across global data network.
+    highlights:
+      - "Migrated availability monitoring from HP OpenView to Aprisma (CA) Spectrum platform."
+      - "Supported market trading data and VOIP/Turret networks."
+      - "Developed repeat supression system for syslog-based alerts."
+      - "Implemented emergency notifications with PageNet for on-call rotation."
+      - "Supported and maintained Polycom video conferencing solution and VOIP desk phone networks."
+
+
+education:
+  - area: "Computer Programming & Analysis"
+    institution: "Seneca College of Applied Arts & Technology"
+    url: https://www.senecacollege.ca/programs/fulltime/CPA.html
+    studyType: "Diploma"
+    startDate: 1999-09
+    endDate: 2002-08
+  - area: "Fundamentals of Project Planning and Management"
+    institution: "University of Virginia, Darden School of Business"
+    url: https://www.coursera.org/learn/uva-darden-project-management
+    studyType: "Online Course"
+    startDate: 2020-09
+    endDate: 2020-09
+  - area: "Kafka Monitoring & Operations"
+    institution: Udemy
+    url: https://www.udemy.com/course/kafka-monitoring-and-operations/
+    studyType: "Online Course"
+    startDate: 2019-02
+    endDate: 2019-02
+  - area: "Building Leadership Essentials"
+    institution: The Niagara Institute
+    startDate: 2010-10
+    endDate: 2010-10
+    studyType: "Seminar"
+
+certificates:
+  - name: "Groundwork Level 1 Administrator"
+    date: 2008-09-01
+    issuer: "Groundwork Open Source"
+  - name: "Groundwork Level 2 Engineer"
+    date: 2008-09-01
+    issuer: "Groundwork Open Source"
+  - name: "Building Leadership Essentials"
+    issuer: "The Niagara Institute"
+    date: 2010-08-15
+  - name: "Certified Scrum Master (Inactive)"
+    issuer: "Agile Institute, Berteig Consulting"
+    url: https://www.scrumalliance.org/community/profile/jreid18
+    date: 2015-04-01
+
+awards:
+  - awarder: "Symcor Inc."
+    title: "Outstanding Leadership Award"
+    summary: "Awarded for contributions to steering committee and program for achieving PCI-DSS compliance."
+  - awarder: "Tanzania National Parks"
+    title: "Mt. Kilimanjaro - Tanzania"
+    date: 2019-06-25
+    summary: "Certificate of completion for reaching Gilman's Point (5685m)"
+  
+skills:
+  - name: "Management"
+    level: "Intermediate"
+    keywords:
+      - "Motivation"
+      - "Engagement"
+      - "Hiring"
+      - "Resource Allocation"
+      - "Conflict Resolution"
+      - "Succession Planning"
+      - "Retention"
+      - "Performance Improvement Planning"
+      - "Achievement Recognition"
+      - "Performance Review"
+      - "SMART Goals"
+  - name: "IT Service Delivery"
+    level: "Intermediate"
+    keywords:
+      - "ITILv3"
+      - "ServiceNow"
+      - "JIRA"
+      - "Confluence"
+      - "Peoplesoft"
+      - "Resource Management"
+      - "Project Accounting"
+  - name: "Operating Systems"
+    level: "Master"
+    keywords:
+      - "RedHat Enterprise Linux"
+      - "CentOS"
+      - "Debian"
+      - "Ubuntu"
+      - "Windows Server 2008"
+      - "Windows Server 2012"
+      - "Windows Server 2016"
+  - name: "DevOps"
+    level: "Intermediate"
+    keywords:
+      - "Kubernetes"
+      - "Docker"
+      - "docker-compose"
+      - "YAML"
+      - "JSON"
+      - "CloudFormation"
+      - "Terraform"
+      - "Vagrant"
+      - "Ansible"
+      - "Puppet"
+      - "GitLab CI/CD"
+      - "GitHub Actions"
+  - name: "Cloud Services"
+    level: "Intermediate"
+    keywords:
+      - "AWS"
+      - "EC2"
+      - "EKS"
+      - "CloudWatch"
+      - "Lambda"
+      - "Kinesis"
+      - "SNS"
+      - "VPC"
+      - "S3"
+  - name: "Observability"
+    level: "Master"
+    keywords:
+      - "Nagios"
+      - "Zabbix"
+      - "Splunk"
+      - "Prometheus"
+      - "AlertManager"
+      - "Grafana"
+      - "InfluxDB"
+      - "LogStash"
+      - "FluentD"
+      - "VictorOps"
+      - "ElasticSearch"
+      - "Kibana"
+      - "Jaeger"
+  - name: "Scripting"
+    level: "Intermediate"  
+    keywords:
+      - "Python"
+      - "Bash"
+      - "Javascript"
+      - "NodeJS"

@@ -13,11 +13,9 @@
 > Source: NexusMod
 
 * [Valheim Plus](https://www.nexusmods.com/valheim/mods/4)
-* ~~[Basement](https://www.nexusmods.com/valheim/mods/1118)~~  Useless.
-* ~~[ValheimLib](https://www.nexusmods.com/valheim/mods/504)~~  Not actually required, removing next update.
 * [Epic Loot](https://www.nexusmods.com/valheim/mods/387)
 * [Extended Item Data Framework](https://www.nexusmods.com/valheim/mods/387)
-* [Heightmap Unlimited 1.1.1](https://www.nexusmods.com/valheim/mods/359)
+* [Heightmap Unlimited 1.1.1](https://www.nexusmods.com/valheim/mods/359)   - Stick to 1.1.1 for now
 * [ModConfigEnforcer](https://www.nexusmods.com/valheim/mods/460)
 * [SeedTotem](https://www.nexusmods.com/valheim/mods/876)
 * [UseEquipmentInWater](https://www.nexusmods.com/valheim/mods/121)
@@ -25,7 +23,7 @@
 * [Valheim Legends](https://www.nexusmods.com/valheim/mods/796)
 * [Fisticuffs](https://www.nexusmods.com/valheim/mods/1080)
 
-### Version Data (as of May 11^th^, 2021)
+### Version Data (as of May 13^th^, 2021)
 
 > Folder Dump of __${VortextInstallPath}/valheim__
 > As mods are mostly client-side execution, there should be minimal compatibility issues not being exactly on the same version.

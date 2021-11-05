@@ -1,0 +1,9 @@
+ID: prometheus
+Name: Prometheus
+Meta:
+  title: Prometheus
+  description: Metrics database and scraper of Prometheus endpoints 
+Tags:
+  - htpc
+Address: 10.0.0.5
+Port: 9090

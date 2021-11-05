@@ -1,0 +1,9 @@
+ID: codeserver
+Name: CodeServer
+Meta:
+  title: Code-Server
+  description: Webkit enabled VSCode instance run inside a browser
+Tags:
+  - devel
+Address: 10.0.0.5
+Port: 1337

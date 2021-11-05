@@ -1,5 +1,8 @@
 ID: portainer
 Name: Portainer
+Meta:
+  title: Portainer Container Management
+  description: Handle common actions on Docker engine hosted on Flexo. 
 Tags:
   - mgmt
 Address: 10.0.0.5

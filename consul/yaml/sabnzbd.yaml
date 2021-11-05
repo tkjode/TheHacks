@@ -1,5 +1,8 @@
 ID: sabnzbd
 Name: SabNZBd
+Meta:
+  title: SabNZBd NNTP Downloader
+  description: Connect to NNTP servers and download packages picked up by indexers 
 Tags:
   - htpc
 Address: 10.0.0.5

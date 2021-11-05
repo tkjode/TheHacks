@@ -1,5 +1,8 @@
 ID: flexo
 Name: flexo-web
+Meta:
+  title: Flexo Web Server
+  description: Apache or nginx forwarding and serving web server for static or scripted content.
 Tags:
   - web
 Address: 10.0.0.5

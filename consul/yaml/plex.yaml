@@ -1,5 +1,8 @@
 ID: plex
 Name: Plex
+Meta:
+  title: Plex Media Server
+  description: Watch TV, Movies, Anime and Youtube rips stored in NAS-backed libraries
 Tags:
   - htpc
 Address: 10.0.0.5

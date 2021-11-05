@@ -1,5 +1,8 @@
 ID: grafana
 Name: Grafana
+Meta:
+  title: Grafana Flexo Metrics
+  description: Prometheus-driven metrics visualization
 Tags:
   - mgmt
 Address: 10.0.0.5

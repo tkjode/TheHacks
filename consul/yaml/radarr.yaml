@@ -1,5 +1,8 @@
 ID: radarr
 Name: Radarr
+Meta:
+  title: Radarr Flexo MOvie Downloader
+  description: NNTP Index reviewer for locating and downloading movies to NAS via SabNZBd
 Tags:
   - htpc
 Address: 10.0.0.5

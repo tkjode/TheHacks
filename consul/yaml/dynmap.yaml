@@ -1,0 +1,9 @@
+ID: dynmap
+Name: Dynmap
+Meta:
+  title: "Minecraft Dynamic World Map"
+  description: "Google Maps based tiling mapping system that renders Minecraft Worlds"
+Tags:
+  - minecraft
+Address: 10.0.0.5
+Port: 8123

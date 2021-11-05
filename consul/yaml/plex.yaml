@@ -1,0 +1,6 @@
+ID: plex
+Name: Plex
+Tags:
+  - htpc
+Address: 10.0.0.5
+Port: 32400

@@ -1,9 +1,0 @@
-ID: akaunting
-Name: Akaunting
-Meta:
-  title: Self-Hosted Accounting Software
-  description: Record business transactions and generate invoices.
-Tags:
-  - web
-Address: 10.0.0.5
-Port: 10100

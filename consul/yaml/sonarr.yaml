@@ -1,8 +1,8 @@
 ID: sonarr
-Name: Sonarr
+Name: Sonarr TV
 Meta:
   title: Sonarr TV Shows Downloader
-  description: NNTP Index reviewer for TV Shows and Anime to download to NAS via SabNZBd
+  description: NZB Index search for TV Shows to download to NAS via SabNZBd
 Tags:
   - htpc
 Address: 10.0.0.5

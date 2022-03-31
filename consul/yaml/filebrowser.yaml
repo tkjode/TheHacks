@@ -1,0 +1,9 @@
+ID: filebrowser
+Name: File Browser
+Meta:
+  title: File Browser
+  description: Provides a web-based UI allowing filesystem access to NAS
+Tags:
+  - business
+Address: 10.0.0.5
+Port: 4173

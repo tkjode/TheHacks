@@ -1,13 +1,11 @@
 $schema: "https://json.schemastore.org/resume.json"
 meta:
-  theme: elegant
+  theme: stackoverflow
 basics:
   name: Jody Reid
   label: Information Technology Service Delivery and Consulting
-  image: https://media-exp1.licdn.com/dms/image/C4E03AQH4T7FEBMpZvw/profile-displayphoto-shrink_800_800/0/1571778758437?e=1632960000&v=beta&t=YBeiFe1uFseyKJhcFsSw1YJFtxbcinwG6ORAVpM9hAo
   email: jody.reid@phalnet.com
   phone: (647)203-5633
-  url: https://www.linkedin.com/in/jody-reid-7290739/
   summary: Experienced technical leader with over 20 years of experience designing and delivering robust solutions in multiple domains.
   location:
     address: 23 Ypres Rd.
@@ -23,9 +21,10 @@ basics:
 work:
   - name: "Fidelity Investments"
     url: "https://www.fidelity.com/"
+    position: "OpenShift Engineering"
     description: "Contract - Kubernetes/OpenShift Engineering"
     location: "Toronto, ON"
-    startDate: 2021-06
+    startDate: "2021-06"
     summary: "Develop features and services for Fidelity's OpenShift 4 development and production environments."
     highlights:
       - "Plan and perform configuration updates and version upgrades to OpenShift clusters with zero downtime."
@@ -40,10 +39,11 @@ work:
 
   - name: "Fidelity Investments"
     url: "https://www.fidelity.com/"
+    position: "ServiceNow Application Development Consulting"
     description: "Contract - ServiceNow Application Development Consultant"
     location: "Toronto, ON"
-    startDate: 2020-12
-    endDate: 2021-06
+    startDate: "2020-12"
+    endDate: "2021-06"
     summary: "Develop a workflow and data model for ServiceNow encompassing 7 stages of a new Technology Intake workstream for Server procurement and on-premises deployment."
     highlights:
       - "Analyzed high-level requirements to drive technical discussions with stakeholder and development teams."
@@ -58,8 +58,8 @@ work:
     description: "Information Technology Consulting"
     position: "Senior Technical Analyst, Service Delivery Manager"
     location: "Toronto, ON"
-    startDate: 2019-06
-    endDate: 2020-12
+    startDate: "2019-06"
+    endDate: "2020-12"
     summary: "Manage hosted environments delivery, ensure server security compliance and provide consultative services for major initiatives."
     highlights:
       - "Provide leadership and guidance to on-site and offshore team members assigned to various roles and contracts in clients' business units."
@@ -76,8 +76,8 @@ work:
     description: "Hospitality and Travel Web Content Management"
     position: "Application Monitoring Specialist"
     location: "Toronto, ON"
-    startDate: 2017-05
-    endDate: 2019-07
+    startDate: "2017-05"
+    endDate: "2019-07"
     summary: "Modernize legacy monitoring platform and build self-service observability services in next-generation hosting platforms."
     highlights:
       - "Refactored multiple Nagios XI instances into a unified monitoring platform spanning multiple data centers."
@@ -97,8 +97,8 @@ work:
     description: "Facility Management - Critical Environments"
     position: "Systems Analyst (2015-2015), Technical Operations Manager (2015-2017)"
     location: "Markham, ON"
-    startDate: 2015-03
-    endDate: 2017-03
+    startDate: "2015-03"
+    endDate: "2017-03"
     summary: "Deliver systems and applications monitoring, lead Level 1 and Level 2 End User Support and Desktop Engineering groups."
     highlights:
       - "Implement monitoring and alerting solution with Nagios, Zabbix and VictorOps to cover server and network availability monitoring."
@@ -115,8 +115,8 @@ work:
     description: "Business Process Outsourcing"
     position: "Technical Team Lead (2006-2012), Senior Manager (2012-2014)"
     location: "Mississauga, ON"
-    startDate: 2006-07
-    endDate: 2014-10
+    startDate: "2006-07"
+    endDate: "2014-10"
     summary: "Build enterprise monitoring services, enhance capabilities with in-house developed customizations and ensure alerting coverage across all enterprise services."
     highlights:
       - "Replaced multiple monitoring tools with Groundwork Monitor Enterprise"
@@ -135,8 +135,8 @@ work:
     description: "Ontario Educational Communication Authority (OECA)"
     position: "Implementation Specialist (Contract)"
     loation: "Toronto, ON"
-    startDate: 2004-07
-    endDate: 2006-06
+    startDate: "2004-07"
+    endDate: "2006-06"
     summary: "Implementation of updated core network services, desktop imaging, systems monitoring and site-wide secure wireless service."
     highlights:
       - "Standardized Source Code Management on Subversion and defined simple pipelines to build deployable packages from specific commits and tags."
@@ -150,8 +150,8 @@ work:
     url: https://www.rbccm.com/
     position: "Network Analyst"
     location: "Toronto, ON"
-    startDate: 2001-12
-    endDate: 2004-06
+    startDate: "2001-12"
+    endDate: "2004-06"
     summary: Level 2 Network Support.  Switch and router configuration management across multiple sites.  Manage network availability monitoring across global data network.
     highlights:
       - "Migrated availability monitoring from HP OpenView to Aprisma (CA) Spectrum platform."
@@ -166,132 +166,144 @@ education:
     institution: "Seneca College of Applied Arts & Technology"
     url: https://www.senecacollege.ca/programs/fulltime/CPA.html
     studyType: "Ontario College Advanced Diploma - Partial Completion"
-    startDate: 1999-09
-    endDate: 2002-08
+    startDate: "1999-09"
+    endDate: "2002-08"
   - area: "Fundamentals of Project Planning and Management"
     institution: "University of Virginia, Darden School of Business"
     url: https://www.coursera.org/learn/uva-darden-project-management
     studyType: "Online Course"
-    startDate: 2020-09
-    endDate: 2020-09
+    startDate: "2020-09"
+    endDate: "2020-09"
   - area: "Kafka Monitoring & Operations"
     institution: Udemy
     url: https://www.udemy.com/course/kafka-monitoring-and-operations/
     studyType: "Online Course"
-    startDate: 2019-02
-    endDate: 2019-02
+    startDate: "2019-02"
+    endDate: "2019-02"
   - area: "Building Leadership Essentials"
     institution: The Niagara Institute
-    startDate: 2010-10
-    endDate: 2010-10
+    startDate: "2010-10"
+    endDate: "2010-10"
     studyType: "Seminar"
 
 certificates:
   - name: "Groundwork Level 1 Administrator"
-    date: 2008-09-01
+    date: "2008-09-01"
     issuer: "Groundwork Open Source"
   - name: "Groundwork Level 2 Engineer"
-    date: 2008-09-01
+    date: "2008-09-01"
     issuer: "Groundwork Open Source"
   - name: "Building Leadership Essentials"
     issuer: "The Niagara Institute"
-    date: 2010-08-15
+    date: "2010-08-15"
   - name: "Certified Scrum Master (Inactive)"
     issuer: "Agile Institute, Berteig Consulting"
     url: https://www.scrumalliance.org/community/profile/jreid18
-    date: 2015-04-01
+    date: "2015-04-01"
 
 awards:
   - awarder: "Tanzania National Parks"
     title: "Mt. Kilimanjaro - Tanzania"
-    date: 2019-06-25
+    date: "2019-06-25"
     summary: "Certificate of completion for reaching Gilman's Point (5685m)"
 
 skills:
-  - name: "Management"
-    level: "Intermediate"
+  - name: "Observability"
+    level: "Master"
     keywords:
-      - "Motivation"
-      - "Engagement"
-      - "Hiring"
-      - "Resource Allocation"
-      - "Conflict Resolution"
-      - "Succession Planning"
-      - "Retention"
-      - "Performance Improvement Planning"
-      - "Achievement Recognition"
-      - "Performance Review"
-      - "SMART Goals"
+      - "Prometheus"
+      - "Thanos"
+      - "AlertManager"
+      - "Grafana"
+      - "InfluxDB"
+      - "FluentD/FluentBit"
+      - "Vector"
+      - "VictorOps"
+      - "PagerDuty"
+      - "ElasticSearch"
+      - "Kibana"
+      - "Jaeger"
+      - "Nagios"
+      - "Zabbix"
+      - "Splunk"
+
+  - name: "Container Orchestration"
+    level: "Advanced"
+    keywords:
+      - "Docker"
+      - "Docker-compose"
+      - "Kubernetes v1.8 - v1.26"
+      - "OpenShift v4.8 - v4.10"
+      - "RedHat Hive"
+
+  - name: "Infrastructure Providers"
+    level: "Advanced"
+    keywords:
+      - "AWS"
+      - "Azure"
+      - "Google Cloud Provider"
+      - "VMWare vSphere"
+
+  - name: "DevOps CI/CD"
+    level: "Advanced"
+    keywords:
+      - "GitOps"
+      - "Flux CI/CD"
+      - "CloudFormation"
+      - "Terraform"
+      - "Consul"
+      - "Vault"
+      - "Ansible"
+      - "GitLab CI/CD"
+      - "GitHub Actions"
+
+  - name: "Scripting and Development"
+    level: "Advanced"
+    keywords:
+      - "bash"
+      - "JavaScript ES6/7"
+      - "NodeJS v18"
+      - "Lua"
+      - "Java"
+      - "Go"
+      - "Python"
+      - "C/C++"
+
+  - name: "Markup, Query and Definitions Languages"
+    level: "Master"
+    keywords:
+      - "YAML"
+      - "JSON"
+      - "HCL"
+      - "XML"
+      - "TOML"
+      - "Vector Remap Language"
+      - "jq"
+      - "SQL"
+      - "PromQL"
+      - "InfluxQL"
+      - "Glide"
+
   - name: "IT Service Delivery"
-    level: "Intermediate"
+    level: "Advanced"
     keywords:
       - "ITILv3"
       - "ServiceNow"
       - "JIRA"
       - "Confluence"
-      - "Peoplesoft"
-      - "Resource Management"
-      - "Project Accounting"
+
+
   - name: "Operating Systems"
-    level: "Master"
+    level: "Advanced"
     keywords:
       - "RedHat Enterprise Linux"
+      - "RedHat Core OS"
       - "CentOS"
       - "Debian"
       - "Ubuntu"
       - "Windows Server 2008"
       - "Windows Server 2012"
       - "Windows Server 2016"
-  - name: "DevOps"
-    level: "Intermediate"
-    keywords:
-      - "Kubernetes"
-      - "Docker"
-      - "docker-compose"
-      - "YAML"
-      - "JSON"
-      - "HCL"
-      - "CloudFormation"
-      - "Terraform"
-      - "Consul"
-      - "Vault"
-      - "Vagrant"
-      - "Ansible"
-      - "Puppet"
-      - "GitLab CI/CD"
-      - "GitHub Actions"
-  - name: "Public Cloud Providers"
-    level: "Intermediate"
-    keywords:
-      - "AWS"
-      - "Elastic Compute+Container"
-      - "Managed Kubernetes EKS"
-      - "CloudWatch"
-      - "Lambda"
-      - "Kinesis"
-      - "SNS"
-      - "VPC"
-      - "S3"
-  - name: "Observability"
-    level: "Master"
-    keywords:
-      - "Nagios"
-      - "Zabbix"
-      - "Splunk"
-      - "Prometheus"
-      - "AlertManager"
-      - "Grafana"
-      - "InfluxDB"
-      - "LogStash"
-      - "FluentD"
-      - "VictorOps"
-      - "ElasticSearch"
-      - "Kibana"
-      - "Jaeger"
-  - name: "Scripting"
-    level: "Intermediate"
-    keywords:
-      - "Python"
-      - "Bash"
-      - "Javascript"
-      - "NodeJS"
+
+
+

@@ -3,28 +3,63 @@ meta:
   theme: elegant
 basics:
   name: Jody Reid
-  label: IT Service Delivery Lead
+  label: Information Technology Service Delivery and Consulting
   image: https://media-exp1.licdn.com/dms/image/C4E03AQH4T7FEBMpZvw/profile-displayphoto-shrink_800_800/0/1571778758437?e=1632960000&v=beta&t=YBeiFe1uFseyKJhcFsSw1YJFtxbcinwG6ORAVpM9hAo
-  email: jody.reid@phalnet.com  
+  email: jody.reid@phalnet.com
   phone: (647)203-5633
-  url: https://www.phalnet.com
-  summary: Experienced technical leader with 20+ years experience building and improving IT services.  A natural motivator with exceptional staff retention rates and above average employee survey engagement scores.  Ready to take on challenging initiatives to build, transform and deliver high-impact services to organizations, users and customers.
+  url: https://www.linkedin.com/in/jody-reid-7290739/
+  summary: Experienced technical leader with over 20 years of experience designing and delivering robust solutions in multiple domains.
   location:
-    address: 23 Ypres Rd. 
-    postalCode: M6M 0B2 
+    address: 23 Ypres Rd.
+    postalCode: M6M 0B2
     city: York
     countryCode: CA
     region: Ontario
   profiles:
+    - network: "GitHub"
+      url: https://github.com/tkjode
     - network: LinkedIn
       url: https://www.linkedin.com/in/jody-reid-7290739/
 work:
+  - name: "Fidelity Investments"
+    url: "https://www.fidelity.com/"
+    description: "Contract - Kubernetes/OpenShift Engineering"
+    location: "Toronto, ON"
+    startDate: 2021-06
+    summary: "Develop features and services for Fidelity's OpenShift 4 development and production environments."
+    highlights:
+      - "Plan and perform configuration updates and version upgrades to OpenShift clusters with zero downtime."
+      - "Improve GitOps toolkits with pipeline tests and helper scripts focussed on automating pull-request reviews."
+      - "Research new Operators that can provide customers, consumers or partner teams with valuable functionality in OpenShift."
+      - "Assist consumers and development teams with Docker, Kubernetes and OpenShift best practices."
+      - "Review pull requests from consumers and team members, call out logic gaps or issues and offer advise on how to fix."
+      - "Train supporting DevOps and SRE teams on new features and operators deployed into environments so they can effectively troubleshoot and make effective use of them."
+      - "Create bastion servers for secured cluster access, enroll team members, and automate command-line management toolkit installation and updates"
+      - "Document and share results of researching new tools, software, operators and patterns as assigned in 'Spike' backlog."
+      - "Collaborate with teams to configure and integrate OpenShift with external services (eg. Log shipping to Splunk or SIEM, Metrics for Grafana)"
+
+  - name: "Fidelity Investments"
+    url: "https://www.fidelity.com/"
+    description: "Contract - ServiceNow Application Development Consultant"
+    location: "Toronto, ON"
+    startDate: 2020-12
+    endDate: 2021-06
+    summary: "Develop a workflow and data model for ServiceNow encompassing 7 stages of a new Technology Intake workstream for Server procurement and on-premises deployment."
+    highlights:
+      - "Analyzed high-level requirements to drive technical discussions with stakeholder and development teams."
+      - "Consulted on ServiceNow database/table design with developers to ensure data was normalized and linked appropriately."
+      - "Presented data and table schemas for discussion and approval internally and with ServiceNow Development and Administration teams."
+      - "Liaised with Virtual Machine automated provisioning team to capture data schema and ensure seamless integration."
+      - "Advocated for the migration of the application out of 'Global' scope into its own to improve security and assisted developers in the transition."
+      - "Conducted code reviews"
+
   - name: "Cognizant"
     url: https://www.cognizant.com/canada
     description: "Information Technology Consulting"
     position: "Senior Technical Analyst, Service Delivery Manager"
     location: "Toronto, ON"
     startDate: 2019-06
+    endDate: 2020-12
     summary: "Manage hosted environments delivery, ensure server security compliance and provide consultative services for major initiatives."
     highlights:
       - "Provide leadership and guidance to on-site and offshore team members assigned to various roles and contracts in clients' business units."
@@ -86,7 +121,7 @@ work:
     highlights:
       - "Replaced multiple monitoring tools with Groundwork Monitor Enterprise"
       - "Built strong vendor relationship with Groundwork and contributed to their product development as their largest customer at the time."
-      - "Within first year of operation, SLA monitoring and alerting reduced penalties paid to customers by 80% vs. previous year."      
+      - "Within first year of operation, SLA monitoring and alerting reduced penalties paid to customers by 80% vs. previous year."
       - "Hired 2 developers and 1 configuration manager to enhance capabilities with integrations with Service-Now, customized monitoring agents."
       - "Ensured monitoring requirements gathering as a mandatory process for all projects to be completed prior to production launch."
       - "Guide developers and project teams to ensure best practices and adequate coverage captured in monitoring requirements."
@@ -130,7 +165,7 @@ education:
   - area: "Computer Programming & Analysis"
     institution: "Seneca College of Applied Arts & Technology"
     url: https://www.senecacollege.ca/programs/fulltime/CPA.html
-    studyType: "Diploma"
+    studyType: "Ontario College Advanced Diploma - Partial Completion"
     startDate: 1999-09
     endDate: 2002-08
   - area: "Fundamentals of Project Planning and Management"
@@ -167,14 +202,11 @@ certificates:
     date: 2015-04-01
 
 awards:
-  - awarder: "Symcor Inc."
-    title: "Outstanding Leadership Award"
-    summary: "Awarded for contributions to steering committee and program for achieving PCI-DSS compliance."
   - awarder: "Tanzania National Parks"
     title: "Mt. Kilimanjaro - Tanzania"
     date: 2019-06-25
     summary: "Certificate of completion for reaching Gilman's Point (5685m)"
-  
+
 skills:
   - name: "Management"
     level: "Intermediate"
@@ -222,7 +254,7 @@ skills:
       - "CloudFormation"
       - "Terraform"
       - "Consul"
-      - "Vault"      
+      - "Vault"
       - "Vagrant"
       - "Ansible"
       - "Puppet"
@@ -232,9 +264,9 @@ skills:
     level: "Intermediate"
     keywords:
       - "AWS"
-      - "Elastic Compute+Container"      
+      - "Elastic Compute+Container"
       - "Managed Kubernetes EKS"
-      - "CloudWatch"      
+      - "CloudWatch"
       - "Lambda"
       - "Kinesis"
       - "SNS"
@@ -257,7 +289,7 @@ skills:
       - "Kibana"
       - "Jaeger"
   - name: "Scripting"
-    level: "Intermediate"  
+    level: "Intermediate"
     keywords:
       - "Python"
       - "Bash"

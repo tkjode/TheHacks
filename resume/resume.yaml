@@ -19,14 +19,17 @@ basics:
     - network: LinkedIn
       url: https://www.linkedin.com/in/jody-reid-7290739/
 work:
-  - name: "Fidelity Investments"
-    url: "https://www.fidelity.com/"
+  - name: "Fidelity National Information Services"
+    url: "https://www.fisglobal.com/"
     position: "OpenShift Engineering"
     description: "Contract - Kubernetes/OpenShift Engineering"
     location: "Toronto, ON"
     startDate: "2021-06"
     summary: "Develop features and services for Fidelity's OpenShift 4 development and production environments."
     highlights:
+      - "Repository design and GitOps enablement for Cluster Operations teams using ArgoCD + OpenShift GitOps Operator"
+      - "Develop Policy libraries to govern cluster configurations through continuous enforcement"
+      - "Centralize management of OpenShift clusters with RedHat Advanced Cluster Management suite"
       - "Plan and perform configuration updates and version upgrades to OpenShift clusters with zero downtime."
       - "Improve GitOps toolkits with pipeline tests and helper scripts focussed on automating pull-request reviews."
       - "Research new Operators that can provide customers, consumers or partner teams with valuable functionality in OpenShift."
@@ -37,8 +40,8 @@ work:
       - "Document and share results of researching new tools, software, operators and patterns as assigned in 'Spike' backlog."
       - "Collaborate with teams to configure and integrate OpenShift with external services (eg. Log shipping to Splunk or SIEM, Metrics for Grafana)"
 
-  - name: "Fidelity Investments"
-    url: "https://www.fidelity.com/"
+  - name: "Fidelity National Information Services"
+    url: "https://www.fisglobal.com/"
     position: "ServiceNow Application Development Consulting"
     description: "Contract - ServiceNow Application Development Consultant"
     location: "Toronto, ON"
@@ -46,12 +49,10 @@ work:
     endDate: "2021-06"
     summary: "Develop a workflow and data model for ServiceNow encompassing 7 stages of a new Technology Intake workstream for Server procurement and on-premises deployment."
     highlights:
-      - "Analyzed high-level requirements to drive technical discussions with stakeholder and development teams."
-      - "Consulted on ServiceNow database/table design with developers to ensure data was normalized and linked appropriately."
-      - "Presented data and table schemas for discussion and approval internally and with ServiceNow Development and Administration teams."
-      - "Liaised with Virtual Machine automated provisioning team to capture data schema and ensure seamless integration."
-      - "Advocated for the migration of the application out of 'Global' scope into its own to improve security and assisted developers in the transition."
-      - "Conducted code reviews"
+      - "Analyze process flow high-level requirements to drive technical discussions with stakeholder teams for catalog, form and table development."
+      - "Consultation on ServiceNow form and table design to ensure data normalization best practices and schema documentation."
+      - "Develop ServiceNow Catalog Items and Intake Forms to integrate directly with virtual machine provisioning automation in Ansible Tower."
+      - "Code Reviews for custom UI behaviours and form elements using JavaScript and Glide."
 
   - name: "Cognizant"
     url: https://www.cognizant.com/canada
@@ -227,34 +228,33 @@ skills:
       - "Zabbix"
       - "Splunk"
 
-  - name: "Container Orchestration"
+  - name: "Container Runtimes & Orchestration"
     level: "Advanced"
     keywords:
-      - "Docker"
-      - "Docker-compose"
-      - "Kubernetes v1.8 - v1.26"
-      - "OpenShift v4.8 - v4.10"
-      - "RedHat Hive"
+      - "docker (Compose & Swarm)"
+      - "Kubernetes 1.28.0"
+      - "podman"
+      - "OpenShift 4.13"
 
   - name: "Infrastructure Providers"
     level: "Advanced"
     keywords:
-      - "AWS"
-      - "Azure"
-      - "Google Cloud Provider"
+      - "Amazon Web Services"
+      - "Microsoft Azure"
       - "VMWare vSphere"
+      - "kvm2"
 
-  - name: "DevOps CI/CD"
+  - name: "Continuous Integration/Delivery with GitOps"
     level: "Advanced"
     keywords:
-      - "GitOps"
-      - "Flux CI/CD"
-      - "CloudFormation"
+      - "ArgoCD / RedHat GitOps"
+      - "Flux"
       - "Terraform"
-      - "Consul"
-      - "Vault"
-      - "Ansible"
-      - "GitLab CI/CD"
+      - "HashiCorp Consul (KV)"
+      - "HashiCorp Vault (Secrets)"
+      - "RedHat Ansible (Tower & AAP)"
+      - "BitBucket"
+      - "GitLab-CI"
       - "GitHub Actions"
 
   - name: "Scripting and Development"
@@ -269,18 +269,19 @@ skills:
       - "Python"
       - "C/C++"
 
-  - name: "Markup, Query and Definitions Languages"
+  - name: "Markup, Query and Schemas"
     level: "Master"
     keywords:
       - "YAML"
       - "JSON"
+      - "jq"
+      - "JSON-Schema"
+      - "PromQL"
       - "HCL"
       - "XML"
       - "TOML"
       - "Vector Remap Language"
-      - "jq"
       - "SQL"
-      - "PromQL"
       - "InfluxQL"
       - "Glide"
 
@@ -289,21 +290,19 @@ skills:
     keywords:
       - "ITILv3"
       - "ServiceNow"
+      - "Release, Change, Incident, Problem Management"
+      - "Azure DevOps"
       - "JIRA"
       - "Confluence"
-
 
   - name: "Operating Systems"
     level: "Advanced"
     keywords:
-      - "RedHat Enterprise Linux"
-      - "RedHat Core OS"
-      - "CentOS"
       - "Debian"
       - "Ubuntu"
-      - "Windows Server 2008"
-      - "Windows Server 2012"
-      - "Windows Server 2016"
+      - "RedHat Enterprise Linux"
+      - "RedHat Core OS"
+      - "Fedora Core OS"
 
 
 
